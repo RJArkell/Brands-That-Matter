@@ -133,6 +133,8 @@ body{
   line-height: 130%;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  display: block;
+  padding-bottom: 20px;
 }
 
 .menu{
@@ -152,6 +154,8 @@ body{
   font-size: 18px;
   line-height: 144%;
   letter-spacing: 0.03em;
+  display: block;
+  padding-bottom:10px;
 }
 
 .audio{
@@ -160,12 +164,12 @@ body{
 }
 
 .social{
-  padding-top:50px;
+  padding-top:35px;
   padding-right: 17px;
 }
 
 #contact-form{
-  padding-top:21px;
+  padding-top:11px;
 }
 
 .legalheader{
@@ -193,6 +197,8 @@ body{
   font-weight: bold;
   font-size: 48px;
   line-height: 52px;
+  display: block;
+  padding-bottom: 9px;
 }
 
 .h-3{
@@ -201,6 +207,7 @@ body{
   font-size: 43px;
   line-height: 47px;
   letter-spacing: 0.03em;
+  display: block;
 }
 
 .copy-l{
@@ -217,6 +224,9 @@ body{
   font-size: 24px;
   line-height: 128%;
   letter-spacing: 0.03em;
+  display: block;
+  padding-top: 76px;
+  padding-bottom: 38px;
 }
 
 .legalhead{
