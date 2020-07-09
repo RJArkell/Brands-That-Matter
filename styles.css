@@ -77,11 +77,11 @@ body{
   border-bottom: 3px solid #E5E5E5;
 }
 
-.main-1 {
+.season-1 {
   grid-area: 2/2/3/3;
 }
 
-.main-2 {
+.season-2 {
   grid-area: 2/4/3/5;
 }
 
