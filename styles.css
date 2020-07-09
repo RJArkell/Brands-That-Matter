@@ -28,6 +28,8 @@ a.season:visited {color: #757575; text-decoration: none; }
 a.season:hover {color: #757575;}
 a.season:active {color: #757575; opacity: 0.6; }
 
+.button::-moz-focus-inner { border: 0; padding: 0; margin:0; }
+
 body{
   width:1440px;
   margin: 0 auto;
@@ -36,6 +38,10 @@ body{
 
 .slate{
   color: #757575;
+}
+
+.stone{
+  color: #E5E5E5;
 }
 
 .vertcenter {
@@ -338,7 +344,7 @@ body{
   border-radius:0;
   border: 1px solid #2F2F2F;
   background-color: #FFFFFF;
-  display: inline-flex;
+  display: inline-block;
 }
 
 .mt-24{
