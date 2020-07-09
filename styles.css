@@ -23,6 +23,11 @@ textarea::placeholder {
   font-family: Archivo;  
 }
 
+a.season:link {color: #757575; text-decoration: none; }
+a.season:visited {color: #757575; text-decoration: none; }
+a.season:hover {color: #757575;}
+a.season:active {color: #757575; opacity: 0.6; }
+
 body{
   width:1440px;
   margin: 0 auto;
@@ -132,6 +137,10 @@ body{
   grid-area: 4/2/5/3;
 }
 
+.navcircle{
+  position:absolute;
+ }
+ 
 .seasonnav{
   font-style: normal;
   font-weight: bold;
@@ -344,3 +353,6 @@ body{
 .mt-49{
   margin-top:49px;
 }
+
+
+
