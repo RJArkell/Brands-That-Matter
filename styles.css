@@ -3,6 +3,26 @@
   src: url("./Bee-Three.ttf");
 }
 
+textarea::-webkit-input-placeholder {
+  font-family: Archivo;
+}
+
+textarea:-moz-placeholder { /* Firefox 18- */
+  font-family: Archivo; 
+}
+
+textarea::-moz-placeholder {  /* Firefox 19+ */
+  font-family: Archivo; 
+}
+
+textarea:-ms-input-placeholder {
+  font-family: Archivo;  
+}
+
+textarea::placeholder {
+  font-family: Archivo;  
+}
+
 body{
   width:1440px;
   margin: 0 auto;
