@@ -338,7 +338,6 @@ body{
 }
 
 .wcb{
-  display: inline-flex;
   float: right;
   padding-top:27px;
 }
