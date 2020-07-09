@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Bee-Three";
-  src: url("./Bee-Three.ttf");
-}
-
 textarea::-webkit-input-placeholder {
   font-family: Archivo;
 }
@@ -27,8 +22,6 @@ a.season:link {color: #757575; text-decoration: none; }
 a.season:visited {color: #757575; text-decoration: none; }
 a.season:hover {color: #757575;}
 a.season:active {color: #757575; opacity: 0.6; }
-
-.button::-moz-focus-inner { border: 0; padding: 0; margin:0; }
 
 body{
   width:1440px;
@@ -176,7 +169,7 @@ body{
 }
 
 .menu{
-  font-family: Bee-Three;
+  font-family: bee, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 44px;
