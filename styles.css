@@ -23,6 +23,16 @@ a.season:visited {color: #757575; text-decoration: none; }
 a.season:hover {color: #757575;}
 a.season:active {color: #757575; opacity: 0.6; }
 
+a.legal:link {color: #2F2F2F; text-decoration: none; }
+a.legal:visited {color: #757575; text-decoration: none; }
+a.legal:hover {color: #757575;}
+a.legal:active {color: #757575; opacity: 0.6; }
+
+a.episode:link {color: #2F2F2F; text-decoration: none; }
+a.episode:visited {color: #757575; text-decoration: none; }
+a.episode:hover {color: #757575;}
+a.episode:active {color: #757575; opacity: 0.6; }
+
 body{
   width:1440px;
   margin: 0 auto;
@@ -93,6 +103,21 @@ body{
   grid-area: 1/4/2/5;
 }
 
+.enav-grid{
+  height: 82px;
+  display: grid;
+  grid-template-columns: 8.6% 12% 58.8% 12% 8.6%;
+  border-bottom: 3px solid #E5E5E5;
+}
+
+.enav-1 {
+  grid-area: 1/2/2/3;
+}
+
+.enav-2 {
+  grid-area: 1/4/2/5;
+}
+
 .season-grid {
   height: 1262px;
   display: grid;
@@ -148,10 +173,13 @@ body{
   text-align: center;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  border-right: 3px solid #E5E5E5;
   display: flex;
   align-items: center;
   justify-content:center;
+}
+
+.navborder{
+  border-right: 3px solid #E5E5E5;
 }
 
 .sub-l{
@@ -166,6 +194,10 @@ body{
 
 .pb-20{
   padding-bottom: 20px;
+}
+
+.pr-25{
+  padding-right: 25px;
 }
 
 .menu{
