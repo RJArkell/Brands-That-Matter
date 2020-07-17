@@ -414,5 +414,6 @@ body{
   margin-top:49px;
 }
 
-
-
+.sizer {
+  width:100%;
+}
