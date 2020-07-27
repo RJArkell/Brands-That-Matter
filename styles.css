@@ -321,10 +321,9 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .legalheader {
-  font-family: 'Archivo Black', sans-serif;
   color: var(--slatepaper);
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 1.0625rem;
   line-height: 212%;
   letter-spacing: 0.14em;
@@ -357,14 +356,13 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .h-2 {
-  font-family: 'Archivo Black', sans-serif;
   color: var(--paper);
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 3rem;
   line-height: 110%;
   display: block;
-  padding-bottom:1.9%;
+  margin-bottom:1.9%;
 }
 
 .h-3 {
