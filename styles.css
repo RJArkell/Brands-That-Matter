@@ -158,7 +158,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 .enav-grid{
   height: 82px;
   display: grid;
-  grid-template-columns: 8.6% 13% 56.8% 13%  8.6%;
+  grid-template-columns: 8.6% 15% 52.8% 15% 8.6%;
 }
 
 .enav-1 { grid-area: 1/2/2/3; }
@@ -170,14 +170,13 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding-bottom: 14.6%;
   display: grid;
   grid-template-columns: 8.4% 23.7% 11.8% 47.7% 8.4%;
-  grid-template-rows:  4.8% 90.4% 4.8%;
   border-top: 3px solid var(--border);
   border-bottom: 3px solid var(--border);
 }
 
-.episode-1{ grid-area: 2/2/3/3; }
+.episode-1{ grid-area: 1/2/2/3; }
 
-.episode-2{ grid-area: 2/4/3/5; }
+.episode-2{ grid-area: 1/4/2/5; }
 
 .season-grid {
   padding-top: 7%;
@@ -247,6 +246,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .switch {
+  display: inline-block;
   content: var(--switch);
 }
 
@@ -255,16 +255,19 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .arrowright { 
+  display: inline-block;
   content: var(--arrowright);
   padding-left: 14.3%;
 }
 
 .arrowleft {
+  display: inline-block;
   content: var(--arrowleft);
   padding-right: 14.3%;
 }
 
 .renga {
+  display: inline-block;
   content: var(--renga);
   padding-top: 24.6%;
 }
@@ -462,20 +465,19 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .audio {
+  display: inline-block;
   padding-right: 6.7%;
   padding-top: 6.3%;
 }
 
-.arrow-l {padding-right:14.7%}
-
-.arrow-r {padding-left:14.7%}
-
 .social {
+  display: inline-block;
   padding-top: 17.2%;
   padding-right: 6.5%;
 }
 
 .epaudio {
+  display: inline-block;
   padding-top: 8.7%;
   padding-right: 4.7%;
 }
@@ -532,7 +534,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 
   .arrow {width: 1.7vw; }
 
-  .switch {width: 1.528vw}
+  .switch {width: 1.528vw; }
 
   .signature { width: 16.5vw; }
 
