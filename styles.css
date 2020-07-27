@@ -230,6 +230,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .signature {
+  display: inline-block;
   content: var(--signature);
 }
 
