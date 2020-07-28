@@ -213,6 +213,19 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
  
 .navborder { border-right: 3px solid var(--border); }
 
+.transcript-grid { 
+  padding-top: 7%;
+  padding-bottom: 7%;
+  display: grid;
+  grid-template-columns: 8.4% 48% 35.2% 8.4%;
+  border-top: 3px solid var(--border);
+  border-bottom: 3px solid var(--border);
+}
+
+.transcript-1 { grid-area: 1/2/2/3; }
+
+.transcript-title { padding-bottom: 13%; }
+
 .plus {
   content: var(--plus);
 }
@@ -392,6 +405,15 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   display: block;
 }
 
+.copy-s-bold {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 128%;
+  letter-spacing: 0.03em;
+  display: block;
+}
+
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: var(--text);
   opacity: 0.5;
@@ -407,6 +429,9 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   opacity: 0.5;
 }
 
+.inline {
+  display:inline-block;
+}
 .nameinput {
   color: var(--text);
   background-color: var(--background);
