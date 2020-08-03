@@ -128,25 +128,21 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 .header-grid {
   padding-bottom:3.7%;
   display: grid;
-  grid-template-columns: 8.4% 33.3% 2.3% 47.7% 8.4%;
-  grid-template-rows:  32% 2.4% 50.6% 15%;
-  border-bottom: 3px solid var(--border);
+  grid-template-columns: 8.4% 33.3% 2.3% 45.4% 2.3% 8.4%;
 }
 
-.header-1 { grid-area: 1/2/3/3; }
+.header-1 { grid-area: 1/2/2/3; }
 
-.header-2 { grid-area: 1/4/3/5; }
+.header-2 { grid-area: 1/4/2/5; }
 
-.header-3 { grid-area: 1/5/2/6; }
-
-.header-4 { grid-area: 3/2/4/3; }
-
-.header-5 { grid-area: 3/4/4/5; }
+.header-3 { grid-area: 1/6/2/7; }
 
 .nav-grid{
   height: 82px;
   display: grid;
   grid-template-columns: 4.4% 17.2% 17.2% 17.2% 44%;
+  border-top: 3px solid var(--border);
+  border-bottom: 3px solid var(--border);
 }
 
 .nav-1 { grid-area: 1/2/2/3; }
@@ -159,6 +155,8 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   height: 82px;
   display: grid;
   grid-template-columns: 8.6% 15% 52.8% 15% 8.6%;
+  border-top: 3px solid var(--border);
+  border-bottom: 3px solid var(--border);
 }
 
 .enav-1 { grid-area: 1/2/2/3; }
@@ -170,8 +168,6 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding-bottom: 14.6%;
   display: grid;
   grid-template-columns: 8.4% 23.7% 11.8% 47.7% 8.4%;
-  border-top: 3px solid var(--border);
-  border-bottom: 3px solid var(--border);
 }
 
 .episode-1{ grid-area: 1/2/2/3; }
@@ -179,24 +175,26 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 .episode-2{ grid-area: 1/4/2/5; }
 
 .season-grid {
-  padding-top: 7%;
-  padding-bottom: 3.5%;
+  padding-top: 4.4%;
+  padding-bottom: 6.7%;
   display: grid;
   grid-template-columns: 8.4% 42.7% 7.2% 33.4% 8.3%;
-  border-bottom: 3px solid var(--border);
-  border-top: 3px solid var(--border);
+  grid-template-rows: auto auto;
 }
 
-.season-1 { grid-area: 1/2/2/3; }
+.season-1 { grid-area: 1/2/2/5; padding-bottom: 4.5%; }
 
-.season-2 { grid-area: 1/4/2/5; }
+.season-2 { grid-area: 2/2/3/3; }
+
+.season-3 { grid-area: 2/4/3/5; }
 
 .footer-grid {
-  height: 100%;
   padding-top: 5.8%;
   padding-bottom: 2.4%;
   display: grid;
-  grid-template-columns: 8.4% 18.1% 10.5% 14.2% 40.5% 8.3% ;
+  grid-template-columns: 8.4% 18.1% 10.5% 14.2% 40.5% 8.3%;
+  grid-template-rows: auto auto;
+  border-top: 3px solid var(--border); 
 }
 
 .footer-1 { grid-area: 1/2/2/3; }
@@ -218,8 +216,6 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding-bottom: 7%;
   display: grid;
   grid-template-columns: 8.4% 48% 35.2% 8.4%;
-  border-top: 3px solid var(--border);
-  border-bottom: 3px solid var(--border);
 }
 
 .transcript-1 { grid-area: 1/2/2/3; }
@@ -309,7 +305,15 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   letter-spacing: 0.14em;
   text-transform: uppercase;
   display: block;
-  padding-bottom:4.2%;
+}
+
+.episodes {
+  padding-bottom: 1.7%;
+}
+
+.menus {
+  display:inline-block;
+  padding-right: 4%;
 }
 
 .menu {
@@ -320,8 +324,19 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   line-height: 120%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  display:inline-block;
-  padding-right:6.2%;
+  display:block;
+}
+
+.ep {
+  font-family: Archivo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875rem;
+  line-height: 212%;
+  text-align: right;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #757575;
 }
 
 .legal {
@@ -354,13 +369,17 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   display: block;
 }
 
+.profile { padding-bottom: 22.6%;}
+
 .presents { 
   color: var(--paper);
-  padding-top: 4.2%;
+  padding-top: 10.8%;
+  padding-bottom: 8.3%;
 }
 
 .lights {
-  padding-top: 2.9%;
+  padding-top: 8%;
+  padding-bottom: 6.1%;
 }
 
 .notes {
@@ -477,8 +496,16 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding: 1.87% 3.4% 1.87% 3.4%;
 }
 
-.summary{
-  padding-top: 15.8%;
+.tbutton {
+  border-radius:0;
+  border: 1px solid var(--text);
+  color: var(--text);
+  background-color: var(--background);
+  display: inline-block;
+ margin-bottom: 6.5%;
+ margin-top: 8.7%;
+  padding: 1.87% 3.4% 1.87% 3.4%;
+
 }
 
 .upcoming { padding-bottom: 17.7%; }
@@ -504,7 +531,6 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 
 .epaudio {
   display: inline-block;
-  padding-top: 8.7%;
   padding-right: 4.7%;
 }
 
@@ -566,19 +592,20 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 
   .renga { width: 9.7vw; }
 
-  .nav-grid{ height: 5.7vw; }
+  .ep { font-size: 0.97vw; }
 
   .enav-grid{ height: 5.7vw; }
 
   .navborder { border-right: 0.208vw solid var(--border); }
 
-  .season-grid {
+  .nav-grid {
+    height: 5.7vw;
     border-bottom: 0.208vw solid var(--border);
     border-top: 0.208vw solid var(--border);
   }
 
-  .header-grid {
-    border-bottom: 0.208vw solid var(--border);
+  .footer-grid {
+    border-top: 0.208vw solid var(--border);
   }
 
   .episode-grid {
