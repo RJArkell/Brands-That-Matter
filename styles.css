@@ -709,7 +709,6 @@ padding-right: 4.7%;
     display: grid;
     grid-template-columns: 41% 30% 29%;
     border-top: 0.8vw solid var(--border);
-    border-bottom: 0.8vw solid var(--border);
   }
   
   .arrowleft{ padding-right: 12%; padding-left: 15%;}
@@ -793,11 +792,11 @@ padding-right: 4.7%;
     padding: 3.5% 5% 3.5% 5%;
   }
   
-  .mnavborder {border-top: 0.8vw solid var(--border); }
+  .mnavborder {border-bottom: 0.8vw solid var(--border); }
 
   .seasonnav { font-size: 5.333vw; padding-top: 6.9%; padding-bottom: 6.9%; border-bottom: 0.8vw solid var(--border);}
 
-  .footernav { font-size: 5.333vw; padding-top: 6.9%; padding-bottom: 6.9%; padding-right: 6.9%; padding-left: 6.9%; border-bottom: 0.8vw solid var(--border);}
+  .footernav { font-size: 5.333vw; padding-top: 6.9%; padding-bottom: 6.9%; padding-right: 6.9%; padding-left: 6.9%; border-top: 0.8vw solid var(--border);}
   
   .sub-l { font-size: 3.733vw; }
   
@@ -892,7 +891,6 @@ padding-right: 4.7%;
 
   .tab {
     width: 100%;
-    
     overflow: hidden;
  }
   .tab-label {
@@ -911,8 +909,8 @@ padding-right: 4.7%;
 
   .tab-content {
     max-height: 0;
-    padding: 0 1em;
     transition: all 0.35s;
+
  }
 
   .tabinput:checked + .tab-label::after {
@@ -921,8 +919,6 @@ padding-right: 4.7%;
 
   .tabinput:checked ~ .tab-content {
     max-height: 100vh;
-    padding: 1em;
-    border-bottom: 0.8vw solid var(--border); 
+    padding: 6.9%;
  }
-  
 }
