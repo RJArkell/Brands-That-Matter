@@ -322,7 +322,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .sub-l {
-  color: var(--paper);
+  color: var(--slatepaper);
   font-style: normal;
   font-weight: 700;
   font-size: 1.25rem;
@@ -331,6 +331,14 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   text-transform: uppercase;
   display: block;
 }
+
+.wcb-grid {
+  min-height: 75px;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+}
+
+.wcb-1 { grid-area: 1/1/2/2; }
 
 .episodes {
   color: var(--paper);
@@ -517,6 +525,10 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding: 1.87% 0 8.1% 3.4%;
 }
 
+.tabs { display: none; }
+
+.fnav-grid { display: none; }
+
 .submit {
   width: 17.3%;
   margin-top: 4.1%;
@@ -531,6 +543,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding: 1.87% 3.4% 1.87% 3.4%;
 }
 
+#wcb { padding-left:8.4%; }
 
 .tbutton {
   border-radius:2px;
@@ -651,6 +664,7 @@ padding-right: 4.7%;
   }
 }
 
+/*Mobile*/
 @media (max-width: 768px){
   .page{ width: 100%;}
 
@@ -698,9 +712,9 @@ padding-right: 4.7%;
     border-bottom: 0.8vw solid var(--border);
   }
   
-  .arrowleft{ padding-right: 16.3%; padding-left: 3%;}
+  .arrowleft{ padding-right: 12%; padding-left: 15%;}
 
-  .arrowright{ padding-left: 23%; padding-right: 7%;}
+  .arrowright{ padding-left: 16%; padding-right: 25%;}
 
   .fnav-1 { grid-area: 1/1/2/2; }
   
@@ -722,8 +736,8 @@ padding-right: 4.7%;
   }
 
   .transcript-grid { 
-    padding-top: 7%;
-    padding-bottom: 7%;
+    padding-top: 13.6%;
+    padding-bottom: 18.8%;
     grid-template-columns: 8.4% 83.2% 8.4%;
   }
 
@@ -776,18 +790,20 @@ padding-right: 4.7%;
   .tbutton {
     margin-bottom: 0%;
     margin-top: 0%;
-    padding: 1.87% 3.4% 1.87% 3.4%;
+    padding: 3.5% 5% 3.5% 5%;
   }
   
   .mnavborder {border-top: 0.8vw solid var(--border); }
 
   .seasonnav { font-size: 5.333vw; padding-top: 6.9%; padding-bottom: 6.9%; border-bottom: 0.8vw solid var(--border);}
+
+  .footernav { font-size: 5.333vw; padding-top: 6.9%; padding-bottom: 6.9%; padding-right: 6.9%; padding-left: 6.9%; border-bottom: 0.8vw solid var(--border);}
   
   .sub-l { font-size: 3.733vw; }
   
   .legal { font-size: 4.266vw; }
   
-  .legalheader { font-size: 1.181vw; }
+  .legalheader { font-size: 4vw; }
   
   .sub-s{ font-size: 3.2vw; }
   
@@ -821,13 +837,15 @@ padding-right: 4.7%;
 
   .renga { width: 21.6vw; padding-right:26%; padding-top: 7%}
 
-  #wcb { padding-left:15%; padding-top:8.8%;}
+  #wcb { padding-left:11.5%; padding-top:8.8%; padding-bottom: 6.2%}
 
   .submit {
+    margin-top: 11%;
     width: 31.1%;
   }
 
   .emailinput {
+    margin-top: 5%;
     width: 100%;
   }
 
@@ -843,6 +861,10 @@ padding-right: 4.7%;
     height: 4.8vw;
   }
   
+  .wcb-grid {
+    min-height: 125px;
+  }
+
   .mdiv {
     height: 4.8vw;
     width: 2px;
@@ -860,4 +882,47 @@ padding-right: 4.7%;
     Z-index: 2;
   }
 
+  .tabinput {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+ }
+
+ .tabs {display: initial;}
+
+  .tab {
+    width: 100%;
+    
+    overflow: hidden;
+ }
+  .tab-label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+
+ }
+  .tab-label::after {
+    content: "\276F";
+    width: 1em;
+    height: 1em;
+    text-align: center;
+    transition: all 0.35s;
+ }
+
+  .tab-content {
+    max-height: 0;
+    padding: 0 1em;
+    transition: all 0.35s;
+ }
+
+  .tabinput:checked + .tab-label::after {
+    transform: rotate(90deg);
+ }
+
+  .tabinput:checked ~ .tab-content {
+    max-height: 100vh;
+    padding: 1em;
+    border-bottom: 0.8vw solid var(--border); 
+ }
+  
 }
