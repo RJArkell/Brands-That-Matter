@@ -151,6 +151,8 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 
 .nav-3 { grid-area: 1/4/2/5; }
 
+.mnav-grid {display: none; }
+
 .enav-grid{
   height: 82px;
   display: grid;
@@ -168,11 +170,14 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding-bottom: 14.6%;
   display: grid;
   grid-template-columns: 8.4% 23.7% 11.8% 47.7% 8.4%;
+  grid-template-rows: auto auto;
 }
 
-.episode-1{ grid-area: 1/2/2/3; }
+.episode-1{ grid-area: 1/2/3/3; }
 
 .episode-2{ grid-area: 1/4/2/5; }
+
+.episode-3{ grid-area: 2/4/3/5; }
 
 .season-grid {
   padding-top: 4.4%;
@@ -187,6 +192,8 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 .season-2 { grid-area: 2/2/3/3; }
 
 .season-3 { grid-area: 2/4/3/5; }
+
+.season-4 {display: none; }
 
 .footer-grid {
   padding-top: 5.8%;
@@ -211,6 +218,8 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
  
 .navborder { border-right: 3px solid var(--border); }
 
+.mfooter { display: none;}
+
 .transcript-grid { 
   padding-top: 7%;
   padding-bottom: 7%;
@@ -219,6 +228,8 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .transcript-1 { grid-area: 1/2/2/3; }
+
+.transcript-2 { grid-area: 2/2/3/3; }
 
 .transcript-title { padding-bottom: 13%; }
 
@@ -239,6 +250,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .signature {
+  padding-top: 5%;
   display: inline-block;
   content: var(--signature);
 }
@@ -285,8 +297,21 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 /*Fonts*/
 .seasonnav {
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.25rem;
+  line-height: 130%;  
+  text-align: center;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.epnav {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.875rem;
   line-height: 130%;  
   text-align: center;
   letter-spacing: 0.14em;
@@ -299,7 +324,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 .sub-l {
   color: var(--paper);
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.25rem;
   line-height: 130%;
   letter-spacing: 0.14em;
@@ -308,12 +333,21 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .episodes {
+  color: var(--paper);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 130%;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: block;
   padding-bottom: 1.7%;
 }
 
 .menus {
   display:inline-block;
   padding-right: 4%;
+  padding-bottom: 2%;
 }
 
 .menu {
@@ -321,7 +355,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   font-style: normal;
   font-weight: normal;
   font-size: 2.75rem;
-  line-height: 120%;
+  line-height: 100%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   display:block;
@@ -330,13 +364,14 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 .ep {
   font-family: Archivo;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   font-size: 0.875rem;
-  line-height: 212%;
+  line-height: 171%;
   text-align: right;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: #757575;
+  color: var(--paper);
+  opacity: 0.5;
 }
 
 .legal {
@@ -488,7 +523,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 }
 
 .button {
-  border-radius:0;
+  border-radius:2px;
   border: 1px solid var(--text);
   color: var(--text);
   background-color: var(--background);
@@ -496,16 +531,16 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   padding: 1.87% 3.4% 1.87% 3.4%;
 }
 
+
 .tbutton {
-  border-radius:0;
+  border-radius:2px;
   border: 1px solid var(--text);
   color: var(--text);
   background-color: var(--background);
   display: inline-block;
- margin-bottom: 6.5%;
- margin-top: 8.7%;
+  margin-bottom: 5%;
+  margin-top: 7%;
   padding: 1.87% 3.4% 1.87% 3.4%;
-
 }
 
 .upcoming { padding-bottom: 17.7%; }
@@ -517,21 +552,21 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   align-items: center;
 }
 
+.epaudio {
+display: inline-block;
+padding-right: 4.7%;
+}
+
 .audio {
   display: inline-block;
   padding-right: 6.7%;
   padding-top: 6.3%;
 }
 
-.social {
+.social, .epsocial {
   display: inline-block;
   padding-top: 17.2%;
   padding-right: 6.5%;
-}
-
-.epaudio {
-  display: inline-block;
-  padding-right: 4.7%;
 }
 
 #contact-form { padding-top:3.6%; }
@@ -559,6 +594,8 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   .seasonnav { font-size: 1.389vw; }
   
   .sub-l { font-size: 1.389vw; }
+
+  .episodes { font-size: 1.389vw; }
   
   .menu { font-size: 3.056vw; }
   
@@ -575,6 +612,8 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   .copy-l { font-size: 2.083vw; }
   
   .copy-s { font-size: 1.667vw; }
+
+  .copy-s-bold { font-size: 1.667vw; }
   
   .navcircle { width: 19.3vw; }
 
@@ -586,7 +625,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 
   .arrow {width: 1.7vw; }
 
-  .switch {width: 1.528vw; }
+  .switch { width: 1.528vw; }
 
   .signature { width: 16.5vw; }
 
@@ -594,7 +633,10 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 
   .ep { font-size: 0.97vw; }
 
-  .enav-grid{ height: 5.7vw; }
+  .enav-grid{ height: 5.7vw; 
+    border-top: 0.208vw solid var(--border);
+    border-bottom: 0.208vw solid var(--border);
+  }
 
   .navborder { border-right: 0.208vw solid var(--border); }
 
@@ -607,9 +649,215 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   .footer-grid {
     border-top: 0.208vw solid var(--border);
   }
+}
+
+@media (max-width: 768px){
+  .page{ width: 100%;}
+
+  .header-grid { display: none; }
+
+  .nav-grid { display: none; }
+
+  .enav-grid { display: none; }
+
+  .footer-grid {display: none; }
+
+  .mnav-grid {
+    height: 19.2vw;
+    display: grid;
+    background-color: #E9E4DE;
+    grid-template-columns: 17.6% 61.9% 20.5%;
+  }
+
+  .white {background-color: #FFFFFF;}
+  
+  .mnav-1 { grid-area: 1/1/2/2; padding-left: 25%; padding-top: 40%;}
+
+  .mnav-2 { grid-area: 1/2/2/3; padding-top: 11%;}
+
+  .mnav-3 { grid-area: 1/3/2/4; }
+
+  .dropdown {
+    background-color: #FFFFFF;
+  }
+
+  .dropnav {
+    margin-top: 17.9%;
+    border-top: 0.8vw solid var(--border);
+  }
+
+  .notes {
+    padding-bottom: 6.2%;
+  }
+
+  .fnav-grid{
+    height: 82px;
+    display: grid;
+    grid-template-columns: 41% 30% 29%;
+    border-top: 0.8vw solid var(--border);
+    border-bottom: 0.8vw solid var(--border);
+  }
+  
+  .arrowleft{ padding-right: 16.3%; padding-left: 3%;}
+
+  .arrowright{ padding-left: 23%; padding-right: 7%;}
+
+  .fnav-1 { grid-area: 1/1/2/2; }
+  
+  .fnav-2 { grid-area: 1/3/2/4; }
+
+  .mnavfooter {
+    padding-left: 6.4%;
+    padding-right: 6.4%;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    padding-bottom: 6.4%;
+  }
+
+  .mfooter {
+    display:initial;
+    padding-left: 6.4%;
+    padding-bottom: 6.4%;
+  }
+
+  .transcript-grid { 
+    padding-top: 7%;
+    padding-bottom: 7%;
+    grid-template-columns: 8.4% 83.2% 8.4%;
+  }
+
+  .transcript-1 { display:none; }
+
+  .vh100 { min-height:100vh;}
+
+  .seasonnext {padding-left: 6.9%; padding-right: 6.9%; padding-top: 13.6%;}
+
+  .season-grid {
+    padding-top:0%;
+    padding-bottom: 16%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto;
+  }
+  
+  .season-1 { grid-area: 3/1/4/2; padding-left: 6.9%; padding-right: 6.9%; padding-top: 13.6%;}
+  
+  .season-2 { grid-area: 1/1/2/2; }
+
+  .season-3 { grid-area: 4/1/5/2; padding-left: 6.9%; padding-right: 6.9%;}
+
+  .season-4 { grid-area: 2/1/3/2; padding-left: 6.9%; padding-right: 6.9%; padding-bottom: 10%; display: initial; border-bottom: 0.8vw solid var(--border); }
 
   .episode-grid {
-    border-top: 0.208vw solid var(--border);
-    border-bottom: 0.208vw solid var(--border);
+    padding-left: 6.9%; 
+    padding-right: 6.9%;
+    padding-top: 8%;
+    padding-bottom: 45.5%;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
   }
+  
+  .episode-1 { grid-area: 2/1/3/2; }
+  
+  .episode-2 { grid-area: 1/1/2/2; padding-bottom: 17%; }
+  
+  .episode-3 { grid-area: 3/1/4/2; }
+
+  .menu { font-size: 21.333vw; }
+
+  .ep {font-size: 5.333vw; }
+  
+  .episodes {font-size: 3.733vw; line-height: 186%; padding-bottom: 5.6%;}
+
+  .menus { display: block; padding-bottom: 5%;}
+
+  .tbutton {
+    margin-bottom: 0%;
+    margin-top: 0%;
+    padding: 1.87% 3.4% 1.87% 3.4%;
+  }
+  
+  .mnavborder {border-top: 0.8vw solid var(--border); }
+
+  .seasonnav { font-size: 5.333vw; padding-top: 6.9%; padding-bottom: 6.9%; border-bottom: 0.8vw solid var(--border);}
+  
+  .sub-l { font-size: 3.733vw; }
+  
+  .legal { font-size: 4.266vw; }
+  
+  .legalheader { font-size: 1.181vw; }
+  
+  .sub-s{ font-size: 3.2vw; }
+  
+  .h-2 { font-size: 8.533vw; }
+
+  .h-3 { font-size: 7.645vw; }
+  
+  .copy-l { font-size: 5.333vw; }
+  
+  .copy-s { font-size: 4.267vw; }
+
+  .copy-s-bold { font-size: 4.267vw; }
+  
+  .navcircle { width: 19.3vw; }
+
+  .profile { padding-bottom: 12.3%; }
+
+  .audio { width: 5.867vw; padding-bottom: 7%; padding-top: 9%; }
+  
+  .epaudio { width: 5.867vw; padding-top: 16%; padding-right: 8%; }
+
+  .social{ width: 5.333vw; padding-top: 0%; padding-right:0%; padding-left:6.9%; padding-bottom: 2%;}
+
+  .epsocial{ width: 5.333vw; padding-top: 7%; padding-right:8%; padding-bottom: 10%;}
+
+  .arrow {width: 6.4vw; }
+
+  .switch {width: 1.528vw; }
+
+  .signature { width: 51vw; }
+
+  .renga { width: 21.6vw; padding-right:26%; padding-top: 7%}
+
+  #wcb { padding-left:15%; padding-top:8.8%;}
+
+  .submit {
+    width: 31.1%;
+  }
+
+  .emailinput {
+    width: 100%;
+  }
+
+  .burger {
+    width: 4.8vw;
+    height: 2px;
+    background-color: black;
+    margin: 1.1vw;
+  }
+
+  #mdiv {
+    width: 4.8vw;
+    height: 4.8vw;
+  }
+  
+  .mdiv {
+    height: 4.8vw;
+    width: 2px;
+    margin-left: 12px;
+    background-color: black;
+    transform: rotate(45deg);
+    Z-index: 1;
+  }
+  
+  .md {
+    height: 4.8vw;
+    width: 2px;
+    background-color: black;
+    transform: rotate(90deg);
+    Z-index: 2;
+  }
+
 }
