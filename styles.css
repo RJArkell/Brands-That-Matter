@@ -145,7 +145,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
   border-bottom: 3px solid var(--border);
 }
 
-.nav-1 { grid-area: 1/2/2/3; }
+.nav-1 { grid-area: 1/2/2/3; position: relative;}
 
 .nav-2 { grid-area: 1/3/2/4; }
 
@@ -214,8 +214,7 @@ a.episode:active {color: #4C6F5E; opacity: 0.6; }
 
 .footer-5 { grid-area: 2/2/3/6; }
 
-.navcircle { position: absolute; left:0;
-  right:0; }
+.navcircle { position: absolute;}
  
 .navborder { border-right: 3px solid var(--border); }
 
