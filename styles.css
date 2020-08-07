@@ -24,6 +24,7 @@ body { margin: 0; }
   --light-border: #E5E5E5;
   --light-text: #2F2F2F;
   --light-slate: #757575;
+  --light-mbackground: #E9E4DE;
   --light-background: #FFFFFF;
   --light-plus: url(icons/plus.svg);
   --light-apple: url(icons/apple.svg);
@@ -72,6 +73,7 @@ body { margin: 0; }
   --switch: var(--light-switch);
   --arrowright: var(--light-arrowright);
   --arrowleft: var(--light-arrowleft);
+  --mbackground: var(--light-mbackground);
 }
  
 /*Dark mode*/
@@ -98,6 +100,7 @@ body { margin: 0; }
   --switch: var(--dark-switch);
   --arrowright: var(--dark-arrowright);
   --arrowleft: var(--dark-arrowleft);
+  --mbackground: var(--dark-background);
 }
 
 /*Links*/
@@ -681,7 +684,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   .mnav-grid {
     height: 19.2vw;
     display: grid;
-    background-color: #E9E4DE;
+    background-color: var(--background);
     grid-template-columns: 17.6% 61.9% 20.5%;
   }
   
@@ -724,7 +727,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     padding-right: 25%;
   }
 
-  .dropdown {  background-color: #FFFFFF; }
+  .dropdown { background-color: var(--mbackground); }
 
   .fnav-1 { grid-area: 1/1/2/2; }
   
@@ -936,9 +939,9 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
   /*Menu icons*/
   .burger {
+    background-color: var(--paper);
     width: 4.8vw;
     height: 2px;
-    background-color: black;
     margin: 1.1vw;
   }
 
@@ -951,7 +954,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     height: 4.8vw;
     width: 2px;
     margin-left: 12px;
-    background-color: black;
+    background-color: var(--paper);
     transform: rotate(45deg);
     Z-index: 1;
   }
@@ -959,7 +962,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   .md {
     height: 4.8vw;
     width: 2px;
-    background-color: black;
+    background-color: var(--paper);
     transform: rotate(90deg);
     Z-index: 2;
   }
@@ -990,6 +993,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   }
   .tab-label::after {
     content: "\276F";
+    transform: rotate(90deg);
     width: 1em;
     height: 1em;
     text-align: center;
@@ -998,10 +1002,10 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
   .tab-content {
     max-height: 0;
-    transition: all 0.35s;
+    transition: all;
   }
 
-  .tabinput:checked + .tab-label::after { transform: rotate(90deg); }
+  .tabinput:checked + .tab-label::after { transform: rotate(270deg); }
 
   .tabinput:checked ~ .tab-content {
     max-height: 100vh;
