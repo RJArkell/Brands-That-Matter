@@ -994,10 +994,6 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   .tab-label::after {
     content: "\276F";
     transform: rotate(90deg);
-    width: 1em;
-    height: 1em;
-    text-align: center;
-    transition: all 0.35s;
   }
 
   .tab-content {
@@ -1005,7 +1001,10 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     transition: all;
   }
 
-  .tabinput:checked + .tab-label::after { transform: rotate(270deg); }
+  .tabinput:checked + .tab-label::after { 
+    transform: rotate(270deg); 
+    transform-origin: center center;
+  }
 
   .tabinput:checked ~ .tab-content {
     max-height: 100vh;
