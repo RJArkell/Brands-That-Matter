@@ -10,7 +10,7 @@ textarea:-ms-input-placeholder { font-family: Archivo; }
 
 textarea::placeholder { font-family: Archivo; }
 
-body { margin: 0; }
+body { margin: 0; overflow-x: hidden;}
 
 .page {
   width: 1440px;
@@ -33,6 +33,7 @@ body { margin: 0; }
   --light-signature: url(icons/signature.png);
   --light-instagram: url(icons/instagram.svg);
   --light-twitter: url(icons/twitter.svg);
+  --light-youtube: url(icons/youtube.svg);
   --light-linkedin: url(icons/linkedin.svg);
   --light-renga: url(icons/renga.svg);
   --light-switch: url(icons/switchleft.svg);
@@ -50,6 +51,7 @@ body { margin: 0; }
   --dark-signature: url(icons/signaturewhite.png);
   --dark-instagram: url(icons/instagramwhite.svg);
   --dark-twitter: url(icons/twitterwhite.svg);
+  --dark-youtube: url(icons/youtubewhite.svg);
   --dark-linkedin: url(icons/linkedinwhite.svg);
   --dark-renga: url(icons/rengawhite.svg);
   --dark-switch: url(icons/switchright.svg);
@@ -68,6 +70,7 @@ body { margin: 0; }
   --signature: var(--light-signature);
   --instagram: var(--light-instagram);
   --twitter: var(--light-twitter);
+  --youtube: var(--light-youtube);
   --linkedin: var(--light-linkedin);
   --renga: var(--light-renga);
   --switch: var(--light-switch);
@@ -95,6 +98,7 @@ body { margin: 0; }
   --signature: var(--dark-signature);
   --instagram: var(--dark-instagram);
   --twitter: var(--dark-twitter);
+  --youtube: var(--dark-youtube);
   --linkedin: var(--dark-linkedin);
   --renga: var(--dark-renga);
   --switch: var(--dark-switch);
@@ -119,10 +123,10 @@ a.nextseason:visited { color: var(--slatepaper); text-decoration: none; }
 a.nextseason:hover { color: #4C6F5E;}
 a.nextseason:active { color: #757575; opacity: 0.6; }
 
-a.legal:link { color: var(--text); text-decoration: none; }
-a.legal:visited { color: var(--text); text-decoration: none; }
-a.legal:hover { color: #757575;}
-a.legal:active { color: #757575; opacity: 0.6; }
+a.legall:link { color: var(--text); text-decoration: none; }
+a.legall:visited { color: var(--text); text-decoration: none; }
+a.legall:hover { color: #757575;}
+a.legall:active { color: #757575; opacity: 0.6; }
 
 a.episode:link { color: var(--paper); text-decoration: none; }
 a.episode:visited { color: var(--paper); text-decoration: none; }
@@ -192,6 +196,12 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .episode-3 { grid-area: 2/4/3/5; }
 
+.eptable {
+  width: 70%;
+  padding-bottom: 5%;
+  padding-top: 7%;
+}
+
 .season-grid {
   padding-top: 4.4%;
   padding-bottom: 6.7%;
@@ -211,7 +221,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 8.4% 18.1% 10.5% 14.2% 40.5% 8.3%;
+  grid-template-columns: 8.4% 12.5% 14.2% 12.1% 40.5% 8.3%;
   grid-template-rows: auto auto;
   border-top: 3px solid var(--border); 
   padding: 5.8% 100em 2.4% 100em;
@@ -238,6 +248,11 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 .transcript-1 { grid-area: 1/2/2/3; }
 
 .transcript-2 { grid-area: 2/2/3/3; }
+
+.transcript-3 { 
+  grid-area: 1/2/3/4; 
+  padding-right: 6.9%;
+}
 
 .wcb-grid {
   min-height: 75px;
@@ -420,6 +435,8 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .twitter { content: var(--twitter); }
 
+.youtube { content: var(--youtube); }
+
 .linkedin { content: var(--linkedin); }
 
 .switch {
@@ -515,9 +532,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   color: var(--text);
   background-color: var(--background);
   display: inline-block;
-  margin-bottom: 5%;
-  margin-top: 7%;
-  padding: 1.87% 3.4% 1.87% 3.4%;
+  padding: 5%;
 }
 
 /*Positioning*/
@@ -574,7 +589,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .epaudio {
   display: inline-block;
-  padding-right: 4.7%;
+  padding-right: 16%;
 }
 
 .audio {
@@ -617,6 +632,8 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     border-top: 0.208vw solid var(--border);
     border-bottom: 0.208vw solid var(--border);
   }
+
+  .eptable { width:100% }
 
   .nav-grid {
     height: 5.7vw;
@@ -895,7 +912,6 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   
   .epaudio { 
     width: 5.867vw; 
-    padding-top: 16%; 
     padding-right: 8%; 
   }
 
@@ -936,6 +952,9 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     margin-top: 5%;
     width: 100%;
   }
+  .nameinput { width: 100%; }
+
+  .messageinput { margin-top: 5%; }
 
   /*Menu icons*/
   .burger {
