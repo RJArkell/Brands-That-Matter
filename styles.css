@@ -196,11 +196,16 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .episode-3 { grid-area: 2/4/3/5; }
 
-.eptable {
-  width: 70%;
+.audio-grid{
   padding-bottom: 5%;
   padding-top: 7%;
+  display: grid;
+  grid-template-columns: 28.5% 24% 47.5%;
 }
+
+.audio-1 { grid-area: 1/1/2/2; }
+
+.audio-2 { grid-area: 1/2/2/3; }
 
 .season-grid {
   padding-top: 4.4%;
@@ -221,7 +226,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 8.4% 12.5% 14.2% 12.1% 40.5% 8.3%;
+  grid-template-columns: 8.4% 19.4% 19.4% 40.5% 8.3%;
   grid-template-rows: auto auto;
   border-top: 3px solid var(--border); 
   padding: 5.8% 100em 2.4% 100em;
@@ -232,11 +237,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .footer-2 { grid-area: 1/3/2/4; }
 
-.footer-3 { grid-area: 1/4/2/5;  }
-
-.footer-4 { grid-area: 1/5/2/6; }
-
-.footer-5 { grid-area: 2/2/3/6; }
+.footer-4 { grid-area: 1/4/2/5; }
 
 .transcript-grid { 
   padding-top: 7%;
@@ -532,7 +533,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   color: var(--text);
   background-color: var(--background);
   display: inline-block;
-  padding: 5%;
+  padding: 5% 8% 5% 8%;
 }
 
 /*Positioning*/
@@ -589,6 +590,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
 
 .epaudio {
   display: inline-block;
+  padding-top:2%;
   padding-right: 16%;
 }
 
@@ -633,7 +635,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     border-bottom: 0.208vw solid var(--border);
   }
 
-  .eptable { width:100% }
+  .eptable { width:100%; table-layout: initial; }
 
   .nav-grid {
     height: 5.7vw;
@@ -734,6 +736,11 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     border-top: 0.8vw solid var(--border);
   }
   
+  .audio-grid{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
   .arrowleft { 
     padding-right: 12%; 
     padding-left: 15%;
@@ -852,7 +859,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   .tbutton {
     margin-bottom: 0%;
     margin-top: 0%;
-    padding: 3.5% 5% 3.5% 5%;
+    padding: 5% 8% 5% 8%;
   }
 
   .carbonbadge { float: none; }
@@ -912,7 +919,6 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
   
   .epaudio { 
     width: 5.867vw; 
-    padding-right: 8%; 
   }
 
   .social { 
