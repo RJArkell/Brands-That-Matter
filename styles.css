@@ -1016,6 +1016,7 @@ a.episode:active { color: #4C6F5E; opacity: 0.6; }
     justify-content: space-between;
     cursor: pointer;
   }
+  
   .tab-label::after {
     content: "\276F";
     transform: rotate(90deg);
